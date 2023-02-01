@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: my-helloworld-rs
+  name: osvaldao-rs
   labels:
-    app: my-helloworld
+    app: osvaldao
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app: my-helloworld
+      app: osvaldao
   template:
     metadata:
       labels:
-        app: my-helloworld
+        app: osvaldao
     spec:
       containers:
-      - name: my-helloworld-app
-        image: stacksimplify/kube-helloworld:1.0.0
+      - name: osvaldao-app
+        image: ovaldoy/hello-world-python:0.0.2.RELEASE
